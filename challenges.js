@@ -1,3 +1,5 @@
+const { addListener } = require('nodemon');
+
 // Challenge 1 --> Reverse words
 function reverseWords(sentence) {
   return sentence.split(' ').map((word) => word.split('').reverse().join('')).join(' ');
@@ -44,6 +46,18 @@ function fizzBuzz(number) {
   return array;
 }
 console.log(fizzBuzz(16));
+
+function fizzBuzzAlt(number) {
+  const array = [];
+  for (let i = 1; i <= number; i++) {
+    let result = '';
+    if (i % 3 === 0) result += 'Fizz';
+    if (i % 5 === 0) result += 'Buzz';
+    array.push(result || i);
+  }
+  return array;
+}
+console.log(fizzBuzzAlt(16));
 
 function anagrams(wordOne, wordTwo) {
   if (wordOne.length != wordTwo.length) { return false; }
