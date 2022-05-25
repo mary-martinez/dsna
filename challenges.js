@@ -69,42 +69,10 @@ function anagrams(wordOne, wordTwo) {
   return true;
 };
 
-// console.log(anagrams('pictorialness', 'documentarily'));
+console.log(anagrams('superintended', 'unpredestined'));
+console.log(anagrams('pictorialness', 'documentarily'));
 
-// function isHappy(n) {
-//   const runNums = (number) => {
-//     console.log(number);
-//     const splitN = number.toString().split('');
-//     console.log('splitN', splitN);
-//     currentNum = splitN.reduce((acc, num) => acc += (Number(num) * Number(num)), 0);
-//     console.log('currentNum', currentNum);
-//     console.log(typeof currentNum);
-//     counter++;
-//     console.log('counter', counter);
-//     if (currentNum === 1) {
-//       console.log('currentNum=1', currentNum);
-//       return true;
-//     } else {
-//       return currentNum;
-//     }
-//   };
-//   let currentNum = n;
-//   let counter = 0;
-//   runNums(n);
-//   if (currentNum === 1) { return true; }
-//   do {
-//     if (counter > 0 && currentNum === n) {
-//       console.log('currentNum', currentNum);
-//       return false;
-//     }
-//     else {
-//       console.log('currentNum', currentNum);
-//       runNums(currentNum);
-//     }
 
-//   } while (currentNum != 1);
-//   return true;
-// }
 
 function isHappy(n) {
   const runNums = (number) => {
