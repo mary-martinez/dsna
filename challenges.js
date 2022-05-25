@@ -1,15 +1,49 @@
+// Challenge 1 --> Reverse words
+function reverseWords(sentence) {
+  return sentence.split(' ').map((word) => word.split('').reverse().join('')).join(' ');
+}
+
+console.log(reverseWords('alchemy rocks gold'));
+
 // Challenge 2 --> to sentence case
 function titleCase(sentence) {
   return sentence.split(' ').map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase()).join(' ');
 }
-// console.log(titleCase('alchemy ROCKS goLD'));
+console.log(titleCase('alchemy ROCKS goLD'));
 
+//Challenge 3 --> oddish and evenish
+function oddishOrEvenish(number) {
+  return number.toString().split('').reduce((acc, num) => acc += Number(num), 0) % 2 ? 'oddish' : 'evenish';
+}
+
+console.log(oddishOrEvenish(121));
+console.log(oddishOrEvenish(41));
+
+// Challenge 4 --> at 
 function at(arr, index) {
   return arr.length >= index ? index >= 0 ? arr[index] : arr[(arr.length + index)] : 'The index is past the array length';
 }
 
-// console.log(at(['a', 'b', 'c', 'd', 'e'], 7));
-// console.log(at(['a', 'b', 'c', 'd', 'e'], -2));
+console.log(at(['a', 'b', 'c', 'd', 'e'], 7));
+console.log(at(['a', 'b', 'c', 'd', 'e'], -2));
+
+// Challenge 5 --> FizzBuzz
+function fizzBuzz(number) {
+  const array = [];
+  for (let i = 1; i <= number; i++) {
+    if (i % 15 === 0) {
+      array.push('FizzBuzz');
+    } else if (i % 3 === 0) {
+      array.push('Fizz');
+    } else if (i % 5 === 0) {
+      array.push('Buzz');
+    } else {
+      array.push(i);
+    }
+  }
+  return array;
+}
+console.log(fizzBuzz(16));
 
 function anagrams(wordOne, wordTwo) {
   if (wordOne.length != wordTwo.length) { return false; }
